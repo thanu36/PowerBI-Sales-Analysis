@@ -48,8 +48,11 @@ The current process involves receiving numerous Excel files each quarter, which 
 <ins>**a. Project planning using AIIMS grid**</ins>
 
 -> Purpose - interactive dashboard that enables real time sales insights and support data driven decison making
+
 -> Stakeholder - Market team, Sales director, IT team, Data Analytics team.
+
 -> End result - interactive dashboard providing latest sales insight
+
 -> Success criteria - Dashboard is user friendly, reflects sales insights and helps stakeholders identify trends
 
 
