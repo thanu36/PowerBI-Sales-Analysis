@@ -17,7 +17,8 @@ An interactive Power BI dashboard for analyzing sales performances across region
 
 7.[Conclusion](#Conclusion)
 
-##Problem statement
+
+**Problem statement**
 
 Atliq hardware solutions is a company that supplies computer hardware and peripherals to wide range of clients across India. They supply products to clients in various regins of India. The company is headquatered in Delhi, with several regional offices spread scross the nation. The sales manager faces several challenges in tracking and analysing sales in rapidly growing and dynamic market.
 
@@ -26,6 +27,7 @@ Atliq hardware solutions is a company that supplies computer hardware and periph
 2. Insufficient Reporting Process
 
 **Solution**
+
 a. Clear and understandable reports
 b. Interactive dashboard
 c. Data - Driven decison
