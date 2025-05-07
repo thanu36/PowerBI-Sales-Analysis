@@ -32,7 +32,7 @@ This project demonstrates practical skills in SQL, ETL processes, data modeling,
 7.[Conclusion](#Conclusion)
 
 
-[**Problem statement**](#Problemstatement)
+**Problem statement**
 
 Atliq hardware solutions is a company that supplies computer hardware and peripherals to wide range of clients across India. They supply products to clients in various regins of India. The company is headquatered in Delhi, with several regional offices spread scross the nation. The sales manager faces several challenges in tracking and analysing sales in rapidly growing and dynamic market.
 
@@ -42,6 +42,19 @@ Sales manager in each region provides individual reports, making it difficult fo
    
 2. Insufficient Reporting Process
 The current process involves receiving numerous Excel files each quarter, which makes tracking sales performance time-consuming and inefficient.
+
+**Steps Involved**
+
+<ins>**a. Project planning using AIIMS grid**</ins>
+
+-> Purpose - interactive dashboard that enables real time sales insights and support data driven decison making
+-> Stakeholder - Market team, Sales director, IT team, Data Analytics team.
+-> End result - interactive dashboard providing latest sales insight
+-> Success criteria - Dashboard is user friendly, reflects sales insights and helps stakeholders identify trends
+
+
+
+
    
 
 
