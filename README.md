@@ -2,18 +2,16 @@
 An interactive Power BI dashboard for analyzing sales performances across regions, products and time period.
 
 📑 Table of Contents
-1.[installation] Project Overview / Problem Statement
+1.[Problem statement](#Problemstatement)
 
-Key Features
+2.[Key Features](#KeyFeatures)
 
-Steps Involved
+3.[Steps Involved](#StepsInvolved)
 
-Dashboard Screenshots
+4.[Dashboard Screenshots](#DashboardScreenshots)
 
-Tools and Technologies Used
+5.[Tools and Technologies Used](#ToolsandTechnologiesUsed)
 
-Dataset Description
+6.[Key Insights](#KeyInsights)
 
-Key Insights
-
-Conclusion
+7.[Conclusion](#Conclusion)
