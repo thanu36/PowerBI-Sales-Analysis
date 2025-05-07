@@ -29,5 +29,7 @@ Atliq hardware solutions is a company that supplies computer hardware and periph
 **Solution**
 
 a. Clear and understandable reports
+
 b. Interactive dashboard
+
 c. Data - Driven decison
