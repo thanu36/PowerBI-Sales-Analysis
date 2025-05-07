@@ -15,7 +15,7 @@ An interactive Power BI dashboard for analyzing sales performances across region
 
 6.[Key Insights](#KeyInsights)
 
-7.[Conclusion](#Conclusion
+7.[Conclusion](#Conclusion)
 
 ##Problem statement
 
