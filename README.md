@@ -1,5 +1,5 @@
 # PowerBI-Sales-Analysis
-Sales Analysis is an end-to-end data analytics project focused on transforming raw sales data into actionable business insights. The project follows a complete data analysis lifecycle, including:
+Sales Analysis is an end-to-end data analytics project focused on transforming raw sales data into actionable business insights. The project follows a complete data analysis lifecycle:
 <p align="center">
    
 🔵 *Understanding the Problem Statement* – Defining business challenges and analytical goals.
@@ -42,7 +42,7 @@ This project demonstrates practical skills in SQL, ETL processes, data modeling,
 
 <p align="center">
 
-Atliq hardware solutions is a company that supplies computer hardware and peripherals to wide range of clients across India. They supply products to clients in various regins of India. The company is headquatered in Delhi, with several regional offices spread scross the nation. The sales manager faces several challenges in tracking and analysing sales in rapidly growing and dynamic market.
+DataNova Systems is a company that supplies computer hardware and peripherals to wide range of clients across India. They supply products to clients in various regins of India. The company is headquatered in Delhi, with several regional offices spread scross the nation. The sales manager faces several challenges in tracking and analysing sales in rapidly growing and dynamic market.
 
 </p>
 
@@ -71,12 +71,26 @@ The current process involves receiving numerous Excel files each quarter, which 
 
 <br>
 
-*b. Connecting data to Power BI*
+*b. Data discovery and data analysis*
 
 
+Once AIMS grid is defined, next step is data discovery. In this step, data analyst team approaches IT team within an organization who owns software system that keep track of sales records. These records are stored in MySQL database. Power BI can be plugged to this database to pull necessary information required for data analysis.
+
+<p align="center">
+
+![Screenshot 2025-05-11 232620](https://github.com/user-attachments/assets/616d6374-4169-449e-ba6c-e7cf8359f36c)
+
+</p>
 
 
+-> IT team provides the Analytics team  with access to MySQL database
 
+-> The analytics team:
+
+   * Inspects tables (Customers, Products, Transactions, Date, Markets)
+   * Verifies data integrity by checking for for proper formatting of data, missing or null values.
+     
+-> Performs initial data cleaning and understanding.
 
    
 
