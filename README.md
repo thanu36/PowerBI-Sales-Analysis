@@ -89,9 +89,32 @@ Once AIMS grid is defined, next step is data discovery. In this step, data analy
 
    * Inspects tables (Customers, Products, Transactions, Date, Markets)
    * Verifies data integrity by checking for for proper formatting of data, missing or null values.
-     
--> Performs initial data cleaning and understanding.
+<br>
 
+*c. Data Cleaning*
+
+-> ***Removed non Indian Markets*** :  Filtered out rows with New York and Paris from the Markets table since the business is focused in India.
+
+-> ***Filtered empty rows*** : Removed rows with missing values to maintain data quality.
+
+-> ***Filtered invalid transactions*** : Excluded records where Transaction Amount <= 0.
+
+-> ***Currency conversion*** : Added a conditional column to convert USD to INR using a defined exchange rate formula.
+
+<br>
+
+
+*d. Data Modelling*
+
+-> Established relationship between tables.
+
+-> Model established star schema
+
+![PB1](https://github.com/user-attachments/assets/1ce4c06f-d2da-4ba9-a152-ee449dd6d27c)
+
+
+
+<ins> 2.**Performing primary Analysis on Data** </ins>
    
 
 
