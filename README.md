@@ -91,15 +91,51 @@ Once AIMS grid is defined, next step is data discovery. In this step, data analy
    * Verifies data integrity by checking for for proper formatting of data, missing or null values.
 <br>
 
+*c Data Loading*
+
+-> Established a connection to the MySQL database using Power BI's built-in connector and authenticated using server credentials.
+
+-> Loaded  data into Power BI's data model for building visualizations and performing further analysis.
+
+<br>
+
+
 *c. Data Cleaning*
 
 -> ***Removed non Indian Markets*** :  Filtered out rows with New York and Paris from the Markets table since the business is focused in India.
+```m
+= Table.SelectRows(sales_markets, each ([markets_name] <> "New York" and [markets_name] <> "Paris"))**
+```
+<br>
 
 -> ***Filtered empty rows*** : Removed rows with missing values to maintain data quality.
+```m
+= Table.SelectRows(sales_markets, each ([zone] <> ""))
+```
+<br>
 
 -> ***Filtered invalid transactions*** : Excluded records where Transaction Amount <= 0.
 
+```m
+= Table.SelectRows(sales_transactions, each ([sales_amount] <> -1 and [sales_amount] <> 0))
+```
+
+<br>
+
 -> ***Currency conversion*** : Added a conditional column to convert USD to INR using a defined exchange rate formula.
+
+```m
+= Table.SelectRows(#"Removed -1/0", each ([currency] = "INR#(cr)" or [currency] = "USD#(cr)"))
+
+```
+
+<br>
+
+-> ***Add new column normalised_sales_amount***: To normalize all sales amounts to INR for consistent analysis, especially when the dataset includes mixed currencies.
+
+```m
+= Table.AddColumn(#"Cleanup currency", "normalised_sales_amount", each if [currency] = "USD" or [currency] = "USD#(cr)" then [sales_amount]*75 else [sales_amount])
+```
 
 <br>
 
@@ -115,6 +151,92 @@ Once AIMS grid is defined, next step is data discovery. In this step, data analy
 
 
 <ins> 2.**Performing primary Analysis on Data** </ins>
-   
+
+*1. To display total records are there in transaction table*
+```SQL
+SELECT count(*) FROM sales.transactions;
+```
+
+<br>
+
+*2. show transactions only from Chennai*
+```SQL
+SELECT * FROM sales.transactions where market_code = "Mark001";
+```
+<br>
+
+*3. To know how many currency has USD cureency*
+```SQL
+SELECT * FROM sales.transactions where currency = "USD";
+```
+<br>
+
+*4.To show transactions in 2020*
+```SQL
+SELECT sales.transactions.*, sales.date.* 
+from sales.transactions 
+inner join sales.date
+on sales.transactions.order_date = sales.date.date
+where year = 2020;
+```
+<br>
+
+*5.To calculate the sum of revenue in the year 2020*
+```SQL
+SELECT SUM(sales.transactions.sales_amount)as sum_revenue 
+from sales.transactions 
+inner join sales.date
+on sales.transactions.order_date = sales.date.date
+where year = 2020;
+```
+
+*6.To calculate sum of revenue in chennai*
+```sql
+
+SELECT SUM(sales.transactions.sales_amount)as sum_revenue  
+from sales.transactions 
+inner join sales.date
+on sales.transactions.order_date = sales.date.date
+where year = 2020 and market_code = "Mark001";
+```
+
+*6.To calculate sum of revenue in 2020*
+```sql
+
+SELECT SUM(sales.transactions.sales_amount)as sum_revenue  
+from sales.transactions 
+inner join sales.date
+on sales.transactions.order_date = sales.date.date
+where year = 2020;
+```
+
+<br>
+
+<ins> 3.**Building Reports** </ins>
+
+*a. Displaying revenue by customer*
+
+![revenue](https://github.com/user-attachments/assets/721b0d07-5d88-414b-ada2-b39e94c87ebb)
+
+
+*b. Sales quantity by markrt*
+
+![market](https://github.com/user-attachments/assets/76184dbe-b67f-49b0-9e80-52851bea8a39)
+
+
+*c. Revenue Trend*
+
+![Revenue trend](https://github.com/user-attachments/assets/47db0648-e8bd-491d-99d0-4a4d088603d9)
+
+
+*d.Top 5 Customers*
+
+![Top 5 Customers](https://github.com/user-attachments/assets/6ac9058a-bcfd-4b51-8237-99c4a3cd5c36)
+
+
+*e.Top 5 products*
+
+![Top 5 Products](https://github.com/user-attachments/assets/fad66f3a-5d00-431d-87e9-e812a637fa17)
+
 
 
