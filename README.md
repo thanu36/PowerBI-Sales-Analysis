@@ -42,7 +42,7 @@ This project demonstrates practical skills in SQL, ETL processes, data modeling,
 
 <p align="center">
 
-DataNova Systems is a company that supplies computer hardware and peripherals to wide range of clients across India. They supply products to clients in various regins of India. The company is headquatered in Delhi, with several regional offices spread scross the nation. The sales manager faces several challenges in tracking and analysing sales in rapidly growing and dynamic market.
+Atliq Hardware Systems is a company that supplies computer hardware and peripherals to wide range of clients across India. They supply products to clients in various regins of India. The company is headquatered in Delhi, with several regional offices spread scross the nation. The sales manager faces several challenges in tracking and analysing sales in rapidly growing and dynamic market.
 
 </p>
 
